@@ -1,5 +1,6 @@
 ﻿using CourseLibrary.API.DbContexts;
-using CourseLibrary.API.Entities; 
+using CourseLibrary.API.Entities;
+using CourseLibrary.API.ResourceParameters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -122,24 +123,29 @@ namespace CourseLibrary.API.Services
             return _context.Authors.ToList<Author>();
         }
 
-        public IEnumerable<Author> GetAuthors(string mainCategory, string searchQuery)
+        public IEnumerable<Author> GetAuthors(AuthorsResourceParameters authorsResourceParameters)
         {
-            if (string.IsNullOrEmpty(mainCategory)
-                && string.IsNullOrEmpty(searchQuery))
+            if (authorsResourceParameters == null)
+            {
+                throw new ArgumentNullException(nameof(authorsResourceParameters));
+            }
+
+            if (string.IsNullOrEmpty(authorsResourceParameters.MainCategory)
+                && string.IsNullOrEmpty(authorsResourceParameters.SearchQuery))
             {
                 return GetAuthors();
             }
 
             var collection = _context.Authors as IQueryable<Author>;
 
-            if (!string.IsNullOrEmpty(mainCategory)){
-                mainCategory = mainCategory.Trim();
+            if (!string.IsNullOrEmpty(authorsResourceParameters.MainCategory)){
+                var mainCategory = authorsResourceParameters.MainCategory.Trim();
                 collection = collection.Where(author => author.MainCategory == mainCategory);
             }
 
-            if (!string.IsNullOrEmpty(searchQuery))
+            if (!string.IsNullOrEmpty(authorsResourceParameters.SearchQuery))
             {
-                searchQuery = searchQuery.Trim();
+                var searchQuery = authorsResourceParameters.SearchQuery.Trim();
                 collection = collection.Where(author => author.MainCategory == searchQuery
                     || author.FirstName.Contains(searchQuery)
                     || author.LastName.Contains(searchQuery));
