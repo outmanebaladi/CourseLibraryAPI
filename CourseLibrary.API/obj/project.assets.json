@@ -8227,19 +8227,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Outmane.BALADI\\.nuget\\packages\\": {}
+    "C:\\Users\\outmane\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Outmane.BALADI\\source\\repos\\CourseLibrary.API\\CourseLibrary.API\\CourseLibrary.API.csproj",
+      "projectUniqueName": "C:\\Users\\outmane\\source\\repos\\CourseLibraryAPI\\CourseLibrary.API\\CourseLibrary.API.csproj",
       "projectName": "CourseLibrary.API",
-      "projectPath": "C:\\Users\\Outmane.BALADI\\source\\repos\\CourseLibrary.API\\CourseLibrary.API\\CourseLibrary.API.csproj",
-      "packagesPath": "C:\\Users\\Outmane.BALADI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Outmane.BALADI\\source\\repos\\CourseLibrary.API\\CourseLibrary.API\\obj\\",
+      "projectPath": "C:\\Users\\outmane\\source\\repos\\CourseLibraryAPI\\CourseLibrary.API\\CourseLibrary.API.csproj",
+      "packagesPath": "C:\\Users\\outmane\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\outmane\\source\\repos\\CourseLibraryAPI\\CourseLibrary.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Outmane.BALADI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\outmane\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8296,6 +8296,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8304,7 +8322,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
